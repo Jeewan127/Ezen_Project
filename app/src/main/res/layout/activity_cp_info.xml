@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rkswl.ezen_project.CpInfoActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/cp_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FCC762">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:background="@drawable/signup_path" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="63dp"
+            android:text="연인 정보"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/cp_rl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9">
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:id="@+id/cp_rl_txt1"
+                android:layout_width="75dp"
+                android:layout_height="17dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="연인 핸드폰"
+                    android:textSize="15dp"
+                    android:textColor="#707070"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cp_rl_phone"
+                android:layout_width="250dp"
+                android:layout_height="36dp"
+                android:layout_below="@id/cp_rl_txt1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/signup_box">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="핸드폰"
+                    android:background="@null"
+                    android:textCursorDrawable="@null"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:textColorHint="#B9B9B9"
+                    android:textSize="14dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cp_rl_txt2"
+                android:layout_width="75dp"
+                android:layout_height="17dp"
+                android:layout_below="@id/cp_rl_phone"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="처음 만난날"
+                    android:textSize="15dp"
+                    android:textColor="#707070"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cp_rl_spinner"
+                android:layout_width="250dp"
+                android:layout_height="36dp"
+                android:layout_below="@id/cp_rl_txt2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/cp_rl_spinner_year"
+                    android:layout_width="110dp"
+                    android:layout_height="36dp">
+
+                    <Spinner
+                        android:id="@+id/cp_date_year"
+                        android:layout_width="110dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/signup_spinner_year"></Spinner>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cp_rl_spinner_month"
+                    android:layout_width="60dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/cp_rl_spinner_year">
+
+                    <Spinner
+                        android:id="@+id/cp_date_month"
+                        android:layout_width="110dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/signup_spinner_month"></Spinner>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/cp_rl_spinner_month">
+
+                    <Spinner
+                        android:id="@+id/cp_date_day"
+                        android:layout_width="110dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/signup_spinner_day"></Spinner>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/signup_botton_next">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="다음"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
