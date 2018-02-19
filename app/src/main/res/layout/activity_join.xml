@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/join"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/join_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FCC762">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:background="@drawable/signup_path" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="63dp"
+            android:text="회원 가입"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/top2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/join_profile1"
+            android:layout_width="94dp"
+            android:layout_height="94dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/signup_image" />
+
+        <RelativeLayout
+            android:id="@+id/join_image_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="56dp"
+                android:src="@drawable/signup_camera" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <RelativeLayout
+            android:id="@+id/rl_id"
+            android:layout_width="170dp"
+            android:layout_height="36dp"
+            android:layout_alignLeft="@+id/rl_passwd"
+            android:background="@drawable/signup_box">
+
+            <EditText
+                android:id="@+id/join_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:hint="아이디"
+                android:textColor="#434343"
+                android:textColorHint="#B9B9B9"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/join_id"
+                android:text="(8~12글자)"
+                android:textColor="#73AFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/join_overlap"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/rl_id"
+            android:background="@drawable/signup_botton_confirm3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="확인완료"
+                android:textColor="#ffffff" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_passwd"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/rl_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/signup_box">
+
+            <EditText
+                android:id="@+id/join_passwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:hint="비밀번호"
+                android:textColor="#434343"
+                android:textColorHint="#B9B9B9"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/join_passwd"
+                android:text="(숫자포함 8~12자리)"
+                android:textColor="#73AFFF" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_passwd_check"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_alignLeft="@+id/rl_passwd"
+            android:layout_below="@id/rl_passwd"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/signup_box">
+
+            <EditText
+                android:id="@+id/join_passwd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:hint="비밀번호확인"
+                android:textColor="#434343"
+                android:textColorHint="#B9B9B9"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/rl_passwd_check"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/signup_box">
+
+            <EditText
+                android:id="@+id/join_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:hint="이름"
+                android:textColor="#434343"
+                android:textColorHint="#B9B9B9"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_phone"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/rl_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/signup_box">
+
+            <EditText
+                android:id="@+id/join_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:hint="핸드폰"
+                android:textColor="#434343"
+                android:textColorHint="#B9B9B9"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_gender"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_alignLeft="@id/rl_passwd"
+            android:layout_below="@id/rl_phone"
+            android:layout_marginTop="10dp"
+            android:background="@null">
+
+            <ImageView
+                android:id="@+id/join_gender_m"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/signup_man1" />
+
+            <ImageView
+                android:id="@+id/join_gender_w"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/signup_woman2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_spinner"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_alignLeft="@id/rl_passwd"
+            android:layout_below="@id/rl_gender"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_spinner_year"
+                android:layout_width="110dp"
+                android:layout_height="36dp">
+
+                <Spinner
+                    android:id="@+id/join_date_year"
+                    android:layout_width="110dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/signup_spinner_year"></Spinner>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_spinner_month"
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/rl_spinner_year">
+
+                <Spinner
+                    android:id="@+id/join_date_month"
+                    android:layout_width="110dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/signup_spinner_month"></Spinner>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/rl_spinner_month">
+
+                <Spinner
+                    android:id="@+id/join_date_day"
+                    android:layout_width="110dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/signup_spinner_day"></Spinner>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/signup_botton_next">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="다음"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
