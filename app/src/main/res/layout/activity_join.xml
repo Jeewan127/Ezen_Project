@@ -89,6 +89,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/join_id"
+                android:visibility="visible"
                 android:text="(8~12글자)"
                 android:textColor="#73AFFF" />
         </RelativeLayout>
@@ -139,6 +140,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/join_passwd"
                 android:text="(숫자포함 8~12자리)"
+                android:visibility="visible"
                 android:textColor="#73AFFF" />
 
         </RelativeLayout>
@@ -295,12 +297,14 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/join_rl_next"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:background="@drawable/signup_botton_next">
 
             <TextView
+                android:id="@+id/join_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"

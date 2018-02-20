@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rkswl.ezen_project.CpInfoActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.example.rkswl.ezen_project.CpInfoActivity">
 
     <RelativeLayout
-        android:id="@+id/cp_topbar"
+        android:id="@+id/cp_rl_topbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="#FCC762">
@@ -30,13 +29,13 @@
             android:textColor="#ffffff"
             android:textSize="18dp" />
     </RelativeLayout>
-    
+
     <RelativeLayout
         android:id="@+id/cp_rl"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.9">
-        
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,13 +45,13 @@
                 android:id="@+id/cp_rl_txt1"
                 android:layout_width="75dp"
                 android:layout_height="17dp">
-                
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="연인 핸드폰"
-                    android:textSize="15dp"
-                    android:textColor="#707070"/>
+                    android:textColor="#707070"
+                    android:textSize="15dp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -66,13 +65,13 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="핸드폰"
-                    android:background="@null"
-                    android:textCursorDrawable="@null"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:hint="핸드폰"
                     android:textColorHint="#B9B9B9"
-                    android:textSize="14dp"/>
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
 
             </RelativeLayout>
 
@@ -87,8 +86,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="처음 만난날"
-                    android:textSize="15dp"
-                    android:textColor="#707070"/>
+                    android:textColor="#707070"
+                    android:textSize="15dp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -153,12 +152,14 @@
         android:layout_weight="0.1">
 
         <RelativeLayout
+            android:id="@+id/cp_rl_next"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:background="@drawable/signup_botton_next">
 
             <TextView
+                android:id="@+id/cp_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -169,7 +170,5 @@
 
         </RelativeLayout>
     </RelativeLayout>
-
-
 
 </LinearLayout>
