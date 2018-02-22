@@ -11,7 +11,8 @@
         android:layout_height="56dp"
         android:background="#FCC762">
 
-        <ImageView
+        <Button
+            android:id="@+id/join_back"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_centerVertical="true"
@@ -34,6 +35,8 @@
         android:layout_height="0dp"
         android:layout_weight="0.7">
 
+        <!-- profile1, profile2 둘 중하나를 눌렀을때 프로필 사진 등록 할 수 있게 하면 됨 !-->
+        <!-- 프로필 사진 설정 후에 카메라 invisiable 안시켜도 됨 !-->
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/join_profile1"
             android:layout_width="94dp"
@@ -47,12 +50,13 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <Button
+                android:id="@+id/join_profile2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="70dp"
                 android:layout_marginTop="56dp"
-                android:src="@drawable/signup_camera" />
+                android:background="@drawable/signup_camera" />
 
         </RelativeLayout>
 
@@ -64,10 +68,10 @@
         android:layout_weight="2">
 
         <RelativeLayout
-            android:id="@+id/rl_id"
+            android:id="@+id/join_rl_id"
             android:layout_width="170dp"
             android:layout_height="36dp"
-            android:layout_alignLeft="@+id/rl_passwd"
+            android:layout_alignLeft="@+id/join_rl_passwd"
             android:background="@drawable/signup_box">
 
             <EditText
@@ -99,7 +103,7 @@
             android:layout_width="70dp"
             android:layout_height="36dp"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/rl_id"
+            android:layout_toRightOf="@id/join_rl_id"
             android:background="@drawable/signup_botton_confirm3">
 
             <TextView
@@ -112,10 +116,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_passwd"
+            android:id="@+id/join_rl_passwd"
             android:layout_width="250dp"
             android:layout_height="36dp"
-            android:layout_below="@id/rl_id"
+            android:layout_below="@id/join_rl_id"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/signup_box">
@@ -146,11 +150,11 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_passwd_check"
+            android:id="@+id/join_rl_passwd_check"
             android:layout_width="250dp"
             android:layout_height="36dp"
-            android:layout_alignLeft="@+id/rl_passwd"
-            android:layout_below="@id/rl_passwd"
+            android:layout_alignLeft="@+id/join_rl_passwd"
+            android:layout_below="@id/join_rl_passwd"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/signup_box">
@@ -171,10 +175,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_name"
+            android:id="@+id/join_rl_name"
             android:layout_width="250dp"
             android:layout_height="36dp"
-            android:layout_below="@id/rl_passwd_check"
+            android:layout_below="@id/join_rl_passwd_check"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/signup_box">
@@ -195,10 +199,10 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_phone"
+            android:id="@+id/join_rl_phone"
             android:layout_width="250dp"
             android:layout_height="36dp"
-            android:layout_below="@id/rl_name"
+            android:layout_below="@id/join_rl_name"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/signup_box">
@@ -219,11 +223,11 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_gender"
+            android:id="@+id/join_rl_gender"
             android:layout_width="250dp"
             android:layout_height="36dp"
-            android:layout_alignLeft="@id/rl_passwd"
-            android:layout_below="@id/rl_phone"
+            android:layout_alignLeft="@id/join_rl_passwd"
+            android:layout_below="@id/join_rl_phone"
             android:layout_marginTop="10dp"
             android:background="@null">
 
@@ -244,16 +248,16 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_spinner"
+            android:id="@+id/join_rl_spinner"
             android:layout_width="250dp"
             android:layout_height="36dp"
-            android:layout_alignLeft="@id/rl_passwd"
-            android:layout_below="@id/rl_gender"
+            android:layout_alignLeft="@id/join_rl_passwd"
+            android:layout_below="@id/join_rl_gender"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp">
 
             <RelativeLayout
-                android:id="@+id/rl_spinner_year"
+                android:id="@+id/join_rl_spinner_year"
                 android:layout_width="110dp"
                 android:layout_height="36dp">
 
@@ -266,11 +270,11 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rl_spinner_month"
+                android:id="@+id/join_rl_spinner_month"
                 android:layout_width="60dp"
                 android:layout_height="36dp"
                 android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/rl_spinner_year">
+                android:layout_toRightOf="@+id/join_rl_spinner_year">
 
                 <Spinner
                     android:id="@+id/join_date_month"
@@ -284,7 +288,7 @@
                 android:layout_width="60dp"
                 android:layout_height="36dp"
                 android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/rl_spinner_month">
+                android:layout_toRightOf="@+id/join_rl_spinner_month">
 
                 <Spinner
                     android:id="@+id/join_date_day"
@@ -314,7 +318,6 @@
                 android:textStyle="bold" />
 
         </RelativeLayout>
-
 
     </RelativeLayout>
 
