@@ -1,13 +1,15 @@
-package com.example.rkswl.ezen_project;
+package com.example.rkswl.ezen_project.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class FindPasswordActivity extends AppCompatActivity {
+import com.example.rkswl.ezen_project.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_find_password);
+        setContentView(R.layout.activity_main);
     }
 }

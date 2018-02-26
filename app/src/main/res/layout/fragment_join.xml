@@ -88,6 +88,7 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/join_txt_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -138,6 +139,7 @@
                 android:textSize="14dp" />
 
             <TextView
+                android:id="@+id/join_txt_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"

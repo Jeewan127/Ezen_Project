@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FCC762 "
     android:orientation="vertical"
-    tools:context="com.example.rkswl.ezen_project.LoginActivity">
+    tools:context="com.example.rkswl.ezen_project.activity.LoginActivity">
 
     <RelativeLayout
         android:id="@+id/login_rl_logo"
