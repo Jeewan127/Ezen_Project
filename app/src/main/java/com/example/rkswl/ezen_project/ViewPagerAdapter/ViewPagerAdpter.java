@@ -33,9 +33,6 @@ public class ViewPagerAdpter extends FragmentStatePagerAdapter {
             return new FragmentPassword();
         }
     }
-
-
-
     @Override
     public int getCount() {
         return 3;
