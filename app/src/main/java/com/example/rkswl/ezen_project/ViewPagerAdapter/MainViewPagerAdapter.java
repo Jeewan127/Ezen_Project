@@ -1,11 +1,15 @@
 package com.example.rkswl.ezen_project.ViewPagerAdapter;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.rkswl.ezen_project.R;
 
-public class FragmentMainViewPager extends AppCompatActivity {
+/**
+ * Created by rkswl on 2018-03-08.
+ */
+
+public class MainViewPagerAdapter extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
