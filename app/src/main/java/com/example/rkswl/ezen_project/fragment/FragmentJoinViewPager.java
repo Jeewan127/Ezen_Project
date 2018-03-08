@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.example.rkswl.ezen_project.R;
-import com.example.rkswl.ezen_project.ViewPagerAdapter.ViewPagerAdpter;
+import com.example.rkswl.ezen_project.ViewPagerAdapter.ViewPagerAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,7 +32,7 @@ public class FragmentJoinViewPager extends AppCompatActivity {
     String server_Lock_password = null;
 
 
-    ViewPagerAdpter viewPagerAdapter;
+    ViewPagerAdapter viewPagerAdapter;
     @BindView(R.id.join_viewpager)
     ViewPager viewpager;
 
@@ -41,7 +41,7 @@ public class FragmentJoinViewPager extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_join_view_pager);
         ButterKnife.bind(this);
-        viewPagerAdapter = new ViewPagerAdpter(getSupportFragmentManager(),this);
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),this);
         viewpager.setAdapter(viewPagerAdapter);
         viewpager.setOnTouchListener(new View.OnTouchListener() {
             @Override

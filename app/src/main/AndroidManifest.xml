@@ -20,13 +20,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".fragment.FragmentFindPassword" />
         <activity android:name=".activity.MainActivity" />
-
         <activity android:name=".fragment.FragmentSettingPassword" />
         <activity android:name=".activity.SplashActivity" />
-        <activity android:name=".fragment.FragmentJoinViewPager"/>
+        <activity android:name=".fragment.FragmentJoinViewPager" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".ViewPagerAdapter.MainViewPagerAdapter" />
+        <activity android:name=".ViewPagerAdapter.StoryViewPagerAdapter" />
+        <activity android:name=".fragment.FragmentStory" />
+        <activity android:name=".fragment.FragmentPicture" />
+        <activity android:name=".fragment.FragmentStoryRecyclerView" />
+        <activity android:name=".fragment.FragmentPictureRecyclerView" />
+        <activity android:name=".fragment.FragmentStoryList" />
+        <activity android:name=".fragment.FragmentStoryListRecyclerView" />
+        <activity android:name=".fragment.FragmentStoryView" />
+        <activity android:name=".fragment.FragmentPictureView" />
+        <activity android:name=".activity.PlusActivity"></activity>
     </application>
 
 </manifest>

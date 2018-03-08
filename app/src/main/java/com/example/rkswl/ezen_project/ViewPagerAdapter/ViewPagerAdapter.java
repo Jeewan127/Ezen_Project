@@ -13,12 +13,12 @@ import com.example.rkswl.ezen_project.fragment.FragmentPassword;
  * Created by rkswl on 2018-02-24.
  */
 
-public class ViewPagerAdpter extends FragmentStatePagerAdapter {
+public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     Context context = null;
 
 
-    public ViewPagerAdpter(FragmentManager fm , Context context) {
+    public ViewPagerAdapter(FragmentManager fm , Context context) {
         super(fm);
         this.context = context;
     }
