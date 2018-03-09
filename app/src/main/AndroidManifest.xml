@@ -29,14 +29,32 @@
         <activity android:name=".ViewPagerAdapter.MainViewPagerAdapter" />
         <activity android:name=".ViewPagerAdapter.StoryViewPagerAdapter" />
         <activity android:name=".fragment.FragmentStory" />
-        <activity android:name=".fragment.FragmentPicture" />
+        <activity android:name=".fragment.FragmentPicture" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".fragment.FragmentStoryRecyclerView" />
-        <activity android:name=".fragment.FragmentPictureRecyclerView" />
         <activity android:name=".fragment.FragmentStoryList" />
         <activity android:name=".fragment.FragmentStoryListRecyclerView" />
-        <activity android:name=".fragment.FragmentStoryView" />
-        <activity android:name=".fragment.FragmentPictureView" />
-        <activity android:name=".activity.PlusActivity"></activity>
+        <activity android:name=".fragment.FragmentStoryView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.PlusActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.PlusToActivity" />
+        <activity android:name=".fragment.FlagmentPictureTo"></activity>
     </application>
 
 </manifest>

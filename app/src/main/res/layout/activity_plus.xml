@@ -1,9 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.rkswl.ezen_project.activity.PlusActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/plus_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FCC762">
+
+        <Button
+            android:id="@+id/plus_back"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:background="@drawable/signup_path" />
+
+        <Button
+            android:id="@+id/plus_btn_complete"
+            android:layout_width="30dp"
+            android:layout_height="19dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22dp"
+            android:background="@null"
+            android:text="완료"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TITLE"
+                android:textColor="#434343"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/plus_rl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/signup_box">
+
+                <EditText
+                    android:id="@+id/plus_etx_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:hint="ex) 너와 나의 첫번째 데이트"
+                    android:textColorHint="#434343"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="DATE"
+                android:textColor="#434343"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/plus_spinner"
+                android:layout_width="250dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/plus_rl_spinner_year"
+                    android:layout_width="110dp"
+                    android:layout_height="36dp">
+
+                    <Spinner
+                        android:id="@+id/plus_date_year"
+                        android:layout_width="110dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/signup_spinner_year"></Spinner>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/plus_rl_spinner_month"
+                    android:layout_width="60dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/plus_rl_spinner_year">
+
+                    <Spinner
+                        android:id="@+id/plus_date_month"
+                        android:layout_width="110dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/signup_spinner_month"></Spinner>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/plus_rl_spinner_month">
+
+                    <Spinner
+                        android:id="@+id/plus_date_day"
+                        android:layout_width="110dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/signup_spinner_day"></Spinner>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#434343" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/plus_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
