@@ -38,7 +38,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3">
+        android:layout_weight="0.35">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -49,8 +49,8 @@
 
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="43dp"
+                android:layout_height="20dp"
                 android:text="TITLE"
                 android:textColor="#434343"
                 android:textSize="16dp"
@@ -78,8 +78,8 @@
             </RelativeLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="41dp"
+                android:layout_height="20dp"
                 android:layout_marginTop="5dp"
                 android:text="DATE"
                 android:textColor="#434343"
@@ -135,6 +135,32 @@
                 </RelativeLayout>
 
             </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/plus_txt_picture"
+                    android:layout_width="67dp"
+                    android:layout_height="match_parent"
+                    android:text="PICTURE"
+                    android:textColor="#434343"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/plus_btn_picture"
+                    android:layout_width="12dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/plus_picture"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/plus_txt_picture"
+                    android:layout_marginLeft="8dp"/>
+            </RelativeLayout>
+
+
         </LinearLayout>
 
     </RelativeLayout>
@@ -147,7 +173,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.7">
+        android:layout_weight="0.65">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/plus_recyclerview"
