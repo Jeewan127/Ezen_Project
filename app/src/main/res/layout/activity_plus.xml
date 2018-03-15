@@ -152,8 +152,8 @@
 
                 <Button
                     android:id="@+id/plus_btn_picture"
-                    android:layout_width="12dp"
-                    android:layout_height="8dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/plus_picture"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/plus_txt_picture"

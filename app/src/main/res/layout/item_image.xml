@@ -2,6 +2,6 @@
 <ImageView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="100dp"
     android:scaleType="centerCrop"
-    android:src="@drawable/background_picture"/>
+    android:id="@+id/plus_photos"/>
