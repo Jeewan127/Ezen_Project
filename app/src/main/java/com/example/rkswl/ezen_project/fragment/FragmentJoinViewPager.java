@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.rkswl.ezen_project.R;
 import com.example.rkswl.ezen_project.ViewPagerAdapter.ViewPagerAdapter;
 
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import okhttp3.MultipartBody;
@@ -33,8 +34,7 @@ public class FragmentJoinViewPager extends AppCompatActivity {
 
 
     ViewPagerAdapter viewPagerAdapter;
-    @BindView(R.id.join_viewpager)
-    ViewPager viewpager;
+    @BindView(R.id.join_viewpager) ViewPager viewpager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,16 +52,27 @@ public class FragmentJoinViewPager extends AppCompatActivity {
         });
 
     }
-
+    //처음 join_페이지로 이동하는것
     public void one_move(){
         viewpager.setCurrentItem(0);
     }
-
+    //2번쨰
     public void two_move(){
         viewpager.setCurrentItem(1);
     }
-
+    //3번쨰로이동
     public void three_move(){
         viewpager.setCurrentItem(2);
+    }
+
+    public void back_one(){
+        server_id = null;
+        server_pass = null;
+        server_name = null;
+        server_number = null;
+        server_gender = null;
+        server_date = null;
+        image_file = null;
+
     }
 }

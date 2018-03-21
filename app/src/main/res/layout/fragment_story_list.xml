@@ -14,12 +14,13 @@
         android:layout_weight="0.3">
 
         <ImageView
+            android:id="@+id/story_list_img"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/background_picture" />
 
         <Button
-            android:id="@+id/story_list_back"
+            android:id="@+id/story_list_btn_back"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_marginLeft="10dp"
@@ -41,7 +42,8 @@
             android:layout_above="@+id/story_list_rl"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/main_story_textframe">
+            android:background="@drawable/main_story_textframe"
+            >
 
             <RelativeLayout
                 android:layout_width="wrap_content"

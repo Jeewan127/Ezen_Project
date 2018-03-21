@@ -22,9 +22,8 @@ public class FragmentStoryView extends AppCompatActivity {
     }
 
     static class SamplePagerAdapter extends PagerAdapter {
-
-        private static final int[] sDrawables = {R.drawable.background_picture, R.drawable.background_picture, R.drawable.background_picture,
-                R.drawable.background_picture, R.drawable.background_picture, R.drawable.background_picture};
+        //바꿔야할부분
+        private static final int[] sDrawables = {R.drawable.circle_zero, R.drawable.circle_three};
 
         @Override
         public int getCount() {

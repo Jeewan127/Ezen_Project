@@ -20,41 +20,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fragment.FragmentFindPassword" />
-        <activity android:name=".activity.MainActivity" />
-        <activity android:name=".fragment.FragmentSettingPassword" />
         <activity android:name=".activity.SplashActivity" />
         <activity android:name=".fragment.FragmentJoinViewPager" />
-        <activity android:name=".activity.SettingActivity" />
-        <activity android:name=".ViewPagerAdapter.MainViewPagerAdapter" />
-        <activity android:name=".ViewPagerAdapter.StoryViewPagerAdapter" />
-        <activity android:name=".fragment.FragmentStory" />
-        <activity android:name=".fragment.FragmentPicture" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".fragment.FragmentFindViewpager" />
+        <activity android:name=".fragment.FragmentMainViewPager"></activity>
+        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.PlusActivity"/>
+        <activity android:name=".fragment.FragmentStoryList"></activity>
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-        <activity android:name=".fragment.FragmentStoryRecyclerView" />
-        <activity android:name=".fragment.FragmentStoryList" />
-        <activity android:name=".fragment.FragmentStoryListRecyclerView" />
-        <activity android:name=".fragment.FragmentStoryView">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.PlusActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.PlusToActivity" />
-        <activity android:name=".fragment.FlagmentPictureTo"></activity>
     </application>
 
 </manifest>

@@ -19,6 +19,5 @@ public class plusImageFIle {
     public plusImageFIle(String path , Uri image){
         this.path = path;
         this.image = image;
-
     }
 }

@@ -60,27 +60,13 @@ public class FragmentCoupleInfo extends Fragment {
         ArrayAdapter spinnerAdapter2 = new ArrayAdapter(getContext(),R.layout.support_simple_spinner_dropdown_item,month);
         cp_month.setAdapter(spinnerAdapter2);
         final Context context = getContext();
-        cp_day.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Log.d("ksj","포지션값 :" + position);
-                Log.d("ksj","포지션 :" + cp_month.getSelectedItem().toString());
-                int day = date_count(position+1990,Integer.parseInt(cp_month.getSelectedItem().toString())-1);
-                Log.d("ksj","해당달의 마지막날짜" + day);
-                String[] days = new String[day];
-                for(int a = 0 ; a < days.length ; a++){
-                    days[a] = ""+(a+1);
-                }
-                ArrayAdapter spinnerAdapter3 = new ArrayAdapter(context,R.layout.support_simple_spinner_dropdown_item,days);
-                cp_day.setAdapter(spinnerAdapter3);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
+        int day = date_count(Integer.parseInt(cp_year.getSelectedItem().toString()),1);
+        String[] days = new String[day];
+        for(int a = 0 ; a < days.length ; a++){
+            days[a] = ""+(a+1);
+        }
+        ArrayAdapter spinnerAdapter3 = new ArrayAdapter(context,R.layout.support_simple_spinner_dropdown_item,days);
+        cp_day.setAdapter(spinnerAdapter3);
 
 
         cp_month.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -88,7 +74,7 @@ public class FragmentCoupleInfo extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("ksj",cp_year.getSelectedItem().toString());
                 int day = date_count(Integer.parseInt(cp_year.getSelectedItem().toString()),position);
-                Log.d("ksj","해당달의 마지막날짜" + day);
+                Log.d("ksj","음냠");
                 String[] days = new String[day];
                 for(int a = 0 ; a < days.length ; a++){
                     days[a] = ""+(a+1);
@@ -106,7 +92,7 @@ public class FragmentCoupleInfo extends Fragment {
         return view;
     }
     public int date_count(int year , int month){
-        Log.d("ksj","들어온 날짜값 :" + year + " " + month);
+
         Calendar cal = Calendar.getInstance();
         cal.set(year,month,1);
         return cal.getActualMaximum(Calendar.DAY_OF_MONTH);

@@ -67,7 +67,9 @@
                 android:textColorHint="#ffffff"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
-                android:textCursorDrawable="@null"/>
+                android:textCursorDrawable="@null"
+                android:inputType="textPassword"
+                />
 
         </RelativeLayout>
 

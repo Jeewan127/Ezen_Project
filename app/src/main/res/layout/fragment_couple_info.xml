@@ -73,7 +73,9 @@
                     android:hint="핸드폰"
                     android:textColorHint="#B9B9B9"
                     android:textCursorDrawable="@null"
-                    android:textSize="14dp" />
+                    android:textSize="14dp"
+                    android:inputType="number"
+                    />
 
             </RelativeLayout>
 

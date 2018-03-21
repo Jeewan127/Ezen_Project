@@ -1,11 +1,29 @@
 package com.example.rkswl.ezen_project.fragment;
 
 import android.Manifest;
+
+import android.app.DownloadManager;
 import android.content.Context;
+import android.database.Cursor;
 import android.content.Intent;
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Environment;
+
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -67,8 +85,7 @@ public class FragmentJoin extends Fragment {
     @BindView(R.id.join_gender_w) ImageView join_gender_w;
 
 
-    @BindView(R.id.join_date_year)
-    Spinner join_year;
+    @BindView(R.id.join_date_year) Spinner join_year;
     @BindView(R.id.join_date_month) Spinner join_month;
     @BindView(R.id.join_date_day) Spinner join_day;
 
@@ -76,7 +93,7 @@ public class FragmentJoin extends Fragment {
     CircleImageView join_img; //이미지
 
 
-    String gen = "1"; // 성별 선택값 0 : 없음 1 : 남자  2 : 여자
+    String gen = "0"; // 성별 선택값 0 : 없음 1 : 남자  2 : 여자
 
     //다음부턴을 눌럿을시
     @OnClick(R.id.join_rl_next)
@@ -132,8 +149,6 @@ public class FragmentJoin extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("ksj","여기가먼저?");
-
     }
 
     @Nullable
@@ -162,10 +177,9 @@ public class FragmentJoin extends Fragment {
         join_year.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Log.d("ksj","포지션값 :" + position);
-                Log.d("ksj","포지션 :" + join_month.getSelectedItem().toString());
+
                 int day = date_count(position+1990,Integer.parseInt(join_month.getSelectedItem().toString())-1);
-                Log.d("ksj","해당달의 마지막날짜" + day);
+
                 String[] days = new String[day];
                 for(int a = 0 ; a < days.length ; a++){
                     days[a] = ""+(a+1);
@@ -187,7 +201,7 @@ public class FragmentJoin extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("ksj",join_year.getSelectedItem().toString());
                 int day = date_count(Integer.parseInt(join_year.getSelectedItem().toString()),position);
-                Log.d("ksj","해당달의 마지막날짜" + day);
+
                 String[] days = new String[day];
                 for(int a = 0 ; a < days.length ; a++){
                     days[a] = ""+(a+1);
@@ -249,9 +263,9 @@ public class FragmentJoin extends Fragment {
         PermissionListener permissionListener = new PermissionListener() {
             @Override
             public void onPermissionGranted() {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType(android.provider.MediaStore.Images.Media.CONTENT_TYPE);
+                intent.setData(android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(
                         Intent.createChooser(intent,"Select picture"),0);
             }
@@ -314,6 +328,7 @@ public class FragmentJoin extends Fragment {
     //아이디값이 변경될시 파란색 힌트 값 숨김
     @OnTextChanged(R.id.join_id)
     public void id_ch(){
+        Log.d("ksj","실행되었습니다.");
         if(join_id.getText().toString().equals("")){
             join_txt_id.setVisibility(View.VISIBLE);
         }else{
@@ -333,19 +348,25 @@ public class FragmentJoin extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         if(resultCode == RESULT_OK){
             if(requestCode == 0){
-                File file = new File(
-                        RealPathUtil.getRealPath(getContext(),
-                                data.getData()));
-                Log.d("ksj",file.getName());
+//                File file = new File(
+//                        RealPathUtil.getRealPath(getContext(),
+//                                data.getData()));
+
+
+
+                File file = new File(getRealPathFromURI(data.getData()));
+
                 if (file.exists()) {
                     Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
+
                     join_img.setImageBitmap(bitmap);
                     ((FragmentJoinViewPager)getActivity()).image_file = MultipartBody.Part.createFormData("file",file.getName(), RequestBody.create(MediaType.parse("image/*"),file));
 //                    MultipartBody.Part.createFormData("file",
 //                            file.getName(),
-//                            RequestBody.create(MediaType.parse("image/*"), file));
+//                            RequestBody.create(MediaType.parse("image/*"), file));        //위에 한줄로 씀
                     image = true;
                 }
 
@@ -388,4 +409,20 @@ public class FragmentJoin extends Fragment {
         }
         return  string_path+file_name;
     }
+
+
+    private String getRealPathFromURI(Uri contentUri) {
+        int column_index=0;
+        String[] proj = {MediaStore.Images.Media.DATA};
+        Cursor cursor =  getContext().getContentResolver().query(contentUri, proj, null, null, null);
+        if(cursor.moveToFirst()){
+            column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        }
+
+        return cursor.getString(column_index);
+    }
+
+
+
 }
+

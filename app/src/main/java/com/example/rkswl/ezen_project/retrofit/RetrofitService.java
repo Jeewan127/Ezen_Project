@@ -1,5 +1,9 @@
 package com.example.rkswl.ezen_project.retrofit;
 
+import com.example.rkswl.ezen_project.system_address;
+
+import java.util.ArrayList;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -24,7 +28,9 @@ public class RetrofitService {
     }
 
     public RetrofitRequest init(){
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://172.16.141.233:8090/addwins/").addConverterFactory(GsonConverterFactory.create()).build();
+
+        //Retrofit retrofit = new Retrofit.Builder().baseUrl("http://172.16.141.233:8090/addwins/").addConverterFactory(GsonConverterFactory.create()).build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(system_address.address).addConverterFactory(GsonConverterFactory.create()).build();
 
 
         return retrofit.create(RetrofitRequest.class);

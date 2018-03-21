@@ -1,5 +1,6 @@
 package com.example.rkswl.ezen_project.retrofit;
 
+import com.example.rkswl.ezen_project.StroyImageFIle;
 import com.example.rkswl.ezen_project.model.user;
 
 import java.util.ArrayList;
@@ -21,12 +22,47 @@ public interface RetrofitRequest {
     @GET("login")
     Call<ArrayList<user>> getuserList(@Query("id") String id, @Query("pass") String pass);
 
+    @GET("get_story")
+    Call<ArrayList<StroyImageFIle>> get_story(@Query("id") String id);
+
+    @GET("get_picture")
+    Call<ArrayList<StroyImageFIle>> get_picture(@Query("id") String id);
+
+    @GET("get_story_list")
+    Call<ArrayList<StroyImageFIle>> get_story_list(@Query("id") String id , @Query("title") String title , @Query("date") String date);
+
+    @GET("delete_list")
+    Call<String> delete_list(@Query("id") String id , @Query("title") String title , @Query("date") String date);
+
     @Multipart
     @POST("join")
-    Call<String> insertuser(@Part("id") RequestBody id, @Part("pass") RequestBody pass, @Part("name") RequestBody name, @Part("date") RequestBody date, @Part("gender") RequestBody gender, @Part("number") RequestBody number, @Part MultipartBody.Part photo);
+    Call<String> insertuser(@Part("id") RequestBody id,             //user_id
+                            @Part("pass") RequestBody pass,         //user_pass
+                            @Part("name") RequestBody name,         //user_name
+                            @Part("date") RequestBody date,         //Birthday
+                            @Part("gender") RequestBody gender,     //gender
+                            @Part("number") RequestBody number,     //p_number
+                            @Part MultipartBody.Part photo,           //이미지
+                            @Part("op_number") RequestBody op_number,   //상대방 연락처
+                            @Part("lock_pass") RequestBody lock_pass,  //lock_pass
+                            @Part("FIRST_DAY") RequestBody FIRST_DAY);
+    @Multipart
+    @POST("addFile")
+    Call<String> insert_plus(@Part("id") RequestBody group_id,        //그룹의 아이디
+                             @Part("title") RequestBody Title,          //타이틀
+                             @Part("date") RequestBody date,            //날짜
+                             @Part MultipartBody.Part photo);           //이미지)
+
+
 
     @GET("overlap")
     Call<String> over(@Query("id") String id);
+
+    @GET("password")
+    Call<String> password(@Query("id") String id, @Query("phone") String phone , @Query("date") String date);
+
+    @GET("updatepass")
+    Call<String> up_pass(@Query("id") String id, @Query("password") String pass);
 
     @GET("number")
     Call<String> update_number(@Query("id") String id, @Query("number") String number);
@@ -36,5 +72,7 @@ public interface RetrofitRequest {
 
     @GET("group")
     Call<String> serch_group(@Query("phone") String phone, @Query("date") String date, @Query("id") String id);
+
+
 
 }

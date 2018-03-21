@@ -23,6 +23,7 @@ public class PlusImageAdapter extends RecyclerView.Adapter<PlusImageViewHolder> 
 
     public void add(plusImageFIle plusImageFIle) {
         Log.d("add", "add 실행");
+
         plusImageFIles.add(plusImageFIle);
         notifyDataSetChanged();
     }
@@ -58,6 +59,7 @@ public class PlusImageAdapter extends RecyclerView.Adapter<PlusImageViewHolder> 
     // 뷰홀더와 데이터가 결합할 때 각 줄의 데이터는 주어진 position으로 얻어온다
     @Override
     public void onBindViewHolder(PlusImageViewHolder holder, int position) {
+        Log.d("ksj" , "plus adapter" + position);
         plusImageFIle item = plusImageFIles.get(position);
         holder.plus_photos.setTag(holder);
         holder.plus_photos.setImageURI(plusImageFIles.get(position).getImage());
