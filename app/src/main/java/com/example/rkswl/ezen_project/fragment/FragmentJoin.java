@@ -129,7 +129,6 @@ public class FragmentJoin extends Fragment {
                                 ((FragmentJoinViewPager)getActivity()).server_gender = gen;
                                 ((FragmentJoinViewPager)getActivity()).server_name = name;
                                 ((FragmentJoinViewPager)getActivity()).server_number = phone;
-
                                 ((FragmentJoinViewPager)getActivity()).two_move();      //이동 함수 함수의위치는 join_fragment
                             }
                         }
@@ -158,11 +157,11 @@ public class FragmentJoin extends Fragment {
         View view = inflater.inflate(R.layout.fragment_join,container,false);
         ButterKnife.bind(this,view);
 
-        String[] year = new String[30];
+        String[] year = new String[40];
         String[] month = new String[12];
 
-        for(int a = 0 ; a < 30 ;a++) {
-            int b = 1990 + a;
+        for(int a = 0 ; a < 40;a++) {
+            int b = 1980 + a;
             year[a] = ""+b;
         }
         for(int a = 1 ; a < 13 ; a++){
@@ -178,7 +177,7 @@ public class FragmentJoin extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                int day = date_count(position+1990,Integer.parseInt(join_month.getSelectedItem().toString())-1);
+                int day = date_count(position+1980,Integer.parseInt(join_month.getSelectedItem().toString())-1);
 
                 String[] days = new String[day];
                 for(int a = 0 ; a < days.length ; a++){

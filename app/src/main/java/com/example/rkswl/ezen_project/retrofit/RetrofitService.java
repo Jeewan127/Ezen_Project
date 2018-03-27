@@ -30,7 +30,7 @@ public class RetrofitService {
     public RetrofitRequest init(){
 
         //Retrofit retrofit = new Retrofit.Builder().baseUrl("http://172.16.141.233:8090/addwins/").addConverterFactory(GsonConverterFactory.create()).build();
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(system_address.address).addConverterFactory(GsonConverterFactory.create()).build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(system_address.addre).addConverterFactory(GsonConverterFactory.create()).build();
 
 
         return retrofit.create(RetrofitRequest.class);

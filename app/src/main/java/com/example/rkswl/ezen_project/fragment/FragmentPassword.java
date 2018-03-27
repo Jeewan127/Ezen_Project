@@ -16,6 +16,10 @@ import android.widget.Toast;
 import com.example.rkswl.ezen_project.R;
 import com.example.rkswl.ezen_project.retrofit.RetrofitService;
 
+import org.json.JSONObject;
+
+import java.io.IOException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -121,12 +125,13 @@ public class FragmentPassword extends Fragment {
                 final RequestBody server_lock_pass =
                         RequestBody.create(MediaType.parse("text/plain"),
                                 password);
-
+                Log.d("ksj","일단 클릭은됫어!1");
                 Call<String> item = RetrofitService.getInstance().getRetrofitRequest().insertuser(server_id,server_pass,server_name,server_date,server_gender,server_phone,((FragmentJoinViewPager)getActivity()).image_file,server_op_phone,server_lock_pass,server_FIRST_DAY);
                 item.enqueue(new Callback<String>() {
                     @Override
                     public void onResponse(Call<String> call, Response<String> response) {
                         if(response.isSuccessful()){
+                            Log.d("ksj","안들어오겟지");
                             String insert_ok = response.body();
                             if(!insert_ok.equals("0")){
                                 Toast.makeText(getContext(), "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
@@ -135,12 +140,18 @@ public class FragmentPassword extends Fragment {
                             }else{
                                 Toast.makeText(getContext(), "회원가입에 실패하였습니다.", Toast.LENGTH_SHORT).show();
                             }
+                        } else {
+                            try {
+                                Log.d("ksj",response.errorBody().string() + "");
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
 
                     @Override
                     public void onFailure(Call<String> call, Throwable t) {
-
+                        t.printStackTrace();
                     }
                 });
 

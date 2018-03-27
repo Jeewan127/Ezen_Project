@@ -1,6 +1,7 @@
 package com.example.rkswl.ezen_project.retrofit;
 
 import com.example.rkswl.ezen_project.StroyImageFIle;
+import com.example.rkswl.ezen_project.model.information;
 import com.example.rkswl.ezen_project.model.user;
 
 import java.util.ArrayList;
@@ -19,6 +20,21 @@ import retrofit2.http.Query;
  */
 
 public interface RetrofitRequest {
+    @GET("get_user")
+    Call<ArrayList<user>> get_user(@Query("id") String id);
+
+    @GET("user_ch")
+    Call<String> user_ch(@Query("name") String name , @Query("number") String number , @Query("pass") String password , @Query("op_number") String op_number , @Query("date") String date ,@Query("id") String id);
+
+    @GET("lock_password")
+    Call<String> lock_password(@Query("id") String id ,@Query("pass") String password);
+
+    @GET("get_id")
+    Call<String> get_id(@Query("id") String id);
+
+    @GET("user_information")
+    Call<ArrayList<information>> getuser_information(@Query("id") String id);
+
     @GET("login")
     Call<ArrayList<user>> getuserList(@Query("id") String id, @Query("pass") String pass);
 

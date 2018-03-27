@@ -62,7 +62,8 @@ public class LoginActivity extends AppCompatActivity {
         String id = login_id.getText().toString();
         String pass = login_pw.getText().toString();
         if(!id.equals("")){
-            if(!pass.equals("")){
+            if(!pass.equals("")){ //빈칸제어땜에쓴것
+                Log.d("ksj","들어옴");
                 Call<ArrayList<user>> item = RetrofitService.getInstance().getRetrofitRequest().getuserList(id,pass);
                 item.enqueue(new Callback<ArrayList<user>>() {
                     @Override
@@ -74,7 +75,13 @@ public class LoginActivity extends AppCompatActivity {
                                 login_id.setText("");
                                 login_pw.setText("");
                             }else{
-                                dbManger.add(user.get(0).getID(),user.get(0).getLOCK_PASSWORD());
+                                //성공시
+                                Log.d("ksj","여긴들어오냐흠 왓는데에;;");
+                                Log.d("ksj","흠냐 :" +  user.get(0).getID());
+                                dbManger.delete();
+                                Log.d("ksj","1");
+                                dbManger.add(user.get(0).getUSER_ID() , user.get(0).getID(),user.get(0).getLOCK_PASSWORD());
+                                Log.d("ksj","2");
                                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                                 Log.d("ksj","user :" + user.get(0).getID());
                                 intent.putExtra("id" , user.get(0).getID());

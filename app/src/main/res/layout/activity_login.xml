@@ -36,7 +36,7 @@
 
             <EditText
                 android:id="@+id/login_id"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:hint="아이디"
@@ -59,7 +59,7 @@
 
             <EditText
                 android:id="@+id/login_pw"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:hint="비밀번호"

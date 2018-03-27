@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.main_btn_story) Button btn_story;
     @BindView(R.id.main_btn_picture) Button btn_picture;
 
+    @BindView(R.id.main_btn_setting) Button btn_setting;
 
     public String id;
     @Override
@@ -81,6 +82,11 @@ public class MainActivity extends AppCompatActivity {
 //    main_btn_picture
 
 
+    @OnClick(R.id.main_btn_setting)
+    public void setting(){
+        Intent intent = new Intent(this,SettingActivity.class);
+        startActivity(intent);
+    }
     @Override
     protected void onResume() {
         super.onResume();

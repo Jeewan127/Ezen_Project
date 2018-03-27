@@ -42,7 +42,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/password_check2" />
+                android:background="@drawable/password_check1" />
 
 
             <ImageView
@@ -52,7 +52,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@+id/login_pw_input_img1"
-                android:background="@drawable/password_check2" />
+                android:background="@drawable/password_check1" />
 
             <ImageView
                 android:id="@+id/login_pw_input_img3"
