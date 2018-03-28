@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.rkswl.ezen_project.fragment.FragmentCoupleInfo">
+    tools:context="com.lwan.rkswl.ezen_project.fragment.FragmentCoupleInfo">
 
     <RelativeLayout
         android:id="@+id/cp_rl_topbar"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.rkswl.ezen_project.activity.LoginPwActivity">
+    tools:context="com.lwan.rkswl.ezen_project.activity.LoginPwActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,8 +17,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="30dp"
-        android:layout_weight="0.15">
+        android:layout_weight="0.25">
 
         <TextView
             android:id="@+id/login_pw_txt"
@@ -32,44 +31,40 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/login_pw_txt"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp">
-
+            android:layout_centerInParent="true">
 
             <ImageView
-                android:id="@+id/login_pw_input_img1"
+                android:id="@+id/main_pw_img1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/password_check1" />
 
-
             <ImageView
-                android:id="@+id/login_pw_input_img2"
+                android:id="@+id/main_pw_img2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@+id/login_pw_input_img1"
+                android:layout_toRightOf="@id/main_pw_img1"
                 android:background="@drawable/password_check1" />
 
             <ImageView
-                android:id="@+id/login_pw_input_img3"
+                android:id="@+id/main_pw_img3"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@+id/login_pw_input_img2"
+                android:layout_toRightOf="@id/main_pw_img2"
                 android:background="@drawable/password_check1" />
 
             <ImageView
-                android:id="@+id/login_pw_input_img4"
+                android:id="@+id/main_pw_img4"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@+id/login_pw_input_img3"
+                android:layout_toRightOf="@id/main_pw_img3"
                 android:background="@drawable/password_check1" />
 
         </RelativeLayout>
@@ -79,123 +74,143 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.6">
+        android:layout_weight="0.65">
 
         <RelativeLayout
-            android:id="@+id/login_pw_rl_input1"
+            android:id="@+id/setting_information_rl_input1"
             android:layout_width="245dp"
             android:layout_height="55dp"
             android:layout_centerHorizontal="true">
 
             <Button
-                android:id="@+id/login_pw_ib_one"
+                android:id="@+id/main_id_one"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_alignParentLeft="true"
+                android:text="1"
+                android:textColor="#00000000"
                 android:background="@drawable/circlr_one" />
 
             <Button
-                android:id="@+id/login_pw_ib_two"
+                android:id="@+id/main_id_two"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_centerHorizontal="true"
+                android:text="2"
+                android:textColor="#00000000"
                 android:background="@drawable/circle_two" />
 
             <Button
-                android:id="@+id/login_pw_ib_three"
+                android:id="@+id/main_id_three"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_alignParentRight="true"
+                android:text="3"
+                android:textColor="#00000000"
                 android:background="@drawable/circle_three" />
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/login_pw_rl_input2"
+            android:id="@+id/setting_information_rl_input2"
             android:layout_width="245dp"
             android:layout_height="55dp"
-            android:layout_below="@+id/login_pw_rl_input1"
+            android:layout_below="@+id/setting_information_rl_input1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp">
 
             <Button
-                android:id="@+id/login_pw_ib_four"
+                android:id="@+id/main_id_four"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_alignParentLeft="true"
+                android:text="4"
+                android:textColor="#00000000"
                 android:background="@drawable/circle_four" />
 
             <Button
-                android:id="@+id/login_pw_ib_five"
+                android:id="@+id/main_id_five"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_centerHorizontal="true"
+                android:text="5"
+                android:textColor="#00000000"
                 android:background="@drawable/circle_five" />
 
             <Button
-                android:id="@+id/login_pw_ib_six"
+                android:id="@+id/main_id_six"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_alignParentRight="true"
+                android:text="6"
+                android:textColor="#00000000"
                 android:background="@drawable/circle_six" />
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/login_pw_rl_input3"
+            android:id="@+id/setting_information_rl_input3"
             android:layout_width="245dp"
             android:layout_height="55dp"
-            android:layout_below="@+id/login_pw_rl_input2"
+            android:layout_below="@+id/setting_information_rl_input2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp">
 
             <Button
-                android:id="@+id/login_pw_ib_seven"
+                android:id="@+id/main_id_seven"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_alignParentLeft="true"
+                android:text="7"
+                android:textColor="#00000000"
                 android:background="@drawable/circle_seven" />
 
             <Button
-                android:id="@+id/login_pw_ib_eight"
+                android:id="@+id/main_id_eight"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_centerHorizontal="true"
+                android:text="8"
+                android:textColor="#00000000"
                 android:background="@drawable/circle_eight" />
 
             <Button
-                android:id="@+id/login_pw_ib_nine"
+                android:id="@+id/main_id_nine"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_alignParentRight="true"
+                android:text="9"
+                android:textColor="#00000000"
                 android:background="@drawable/circle_nine" />
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/login_pw_rl_input4"
+            android:id="@+id/setting_information_rl_input4"
             android:layout_width="245dp"
             android:layout_height="55dp"
-            android:layout_below="@+id/login_pw_rl_input3"
+            android:layout_below="@+id/setting_information_rl_input3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp">
 
             <Button
-                android:id="@+id/pw_ib_clear"
+                android:id="@+id/main_id_clear"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_alignParentLeft="true"
                 android:background="@drawable/circle_c" />
 
             <Button
-                android:id="@+id/pw_ib_zero"
+                android:id="@+id/main_id_zero"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textColor="#00000000"
                 android:background="@drawable/circle_zero" />
 
             <Button
-                android:id="@+id/pw_ib_back"
+                android:id="@+id/main_id_back"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_alignParentRight="true"
@@ -205,31 +220,6 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1">
-
-        <RelativeLayout
-            android:id="@+id/login_pw_rl_next"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/signup_botton_next">
-
-            <TextView
-                android:id="@+id/login_pw_next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="다음"
-                android:textColor="#ffffff"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-    </RelativeLayout>
 
 
 </LinearLayout>
